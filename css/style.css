@@ -181,6 +181,10 @@ input[type="submit"] {
   font-size: 0.8rem;
 }
 
+input[type="submit"]:hover {
+  background-color: hsl(225, 93%, 78%);
+}
+
 .feature {
   padding-inline: 15px;
   margin-bottom: 80px;
@@ -284,6 +288,54 @@ input[type="submit"] {
 }
 .subscription form {
   margin-inline: 15px;
+}
+
+.footer{
+  padding-top: 50px;
+  padding-inline: 40px;
+  background-color: var(--clr-very-dark-blue);
+  color: #fff;
+}
+
+.footer * {
+  color: #fff;
+}
+
+.footer .logo {
+  padding-block: 30px;
+}
+
+.other-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+.other-info ul li {
+  padding-block: 7px;
+}
+
+.other-info a {
+  text-decoration: none;
+}
+
+.contact p {
+  padding-block: 10px;
+}
+
+.phone::before {
+  content: url('../images/icon-phone.svg');
+  margin-right: 20px;
+}
+.email::before {
+    content: url('../images/icon-email.svg');
+  margin-right: 20px;
+}
+.social {
+  padding-block: 40px;
+  display: flex;
+  justify-content: center;
+}
+.social svg {
+  margin-inline: 20px;
 }
 
 
