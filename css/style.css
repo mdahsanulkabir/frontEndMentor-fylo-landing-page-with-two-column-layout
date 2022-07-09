@@ -170,7 +170,7 @@ form input {
 
 #femail {
   padding-left : 15px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 input[type="submit"] {
@@ -178,6 +178,7 @@ input[type="submit"] {
   background-color: var(--clr-bright-blue);
   border: none;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 
 .feature {
@@ -227,6 +228,7 @@ input[type="submit"] {
   padding: 20px;
   padding-right: 10px;
   box-shadow: 0 0 10px 5px hsla(0, 1.1%, 63.1%, 0.09);
+  border-radius: 10px;
 }
 .card >p {
   text-align: left;
@@ -270,6 +272,19 @@ input[type="submit"] {
   line-height: 1.5rem;
 }
 
+.subscription {
+  background-color: var(--clr-desaturated-blue);
+  color: var(--clr-light-grayish-blue);
+  text-align: center;
+  padding: 40px;
+}
+.subscription p {
+  margin-top: 20px;
+  font-size: .9rem;
+}
+.subscription form {
+  margin-inline: 15px;
+}
 
 
 .attribution {
