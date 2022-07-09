@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Raleway:wght@400;700;800;900&display=swap');
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif; */
 
@@ -7,10 +6,275 @@ font-family: 'Raleway', sans-serif; */
     --clr-very-dark-blue: hsl(243, 87%, 12%);
     --clr-desaturated-blue: hsl(238, 22%, 44%);
     --clr-bright-blue: hsl(224, 93%, 58%);
-    --clr-moderate-cyne: hsl(170, 45%, 43%);
+    --clr-moderate-cyan: hsl(170, 45%, 43%);
     --clr-light-grayish-blue: hsl(240, 75%, 98%);
     --clr-light-gray: hsl(0, 0%, 75%);
     --ff-heading: 'Raleway', sans-serif;
     --ff-body: 'Open Sans', sans-serif;
 }
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--clr-light-grayish-blue);
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  padding-block: 30px;
+  padding-inline: 25px;
+}
+  
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  width: 5rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-block: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-left: 20px;
+  color: var(--clr-desaturated-blue);
+  font-size: .8rem;
+}
+
+.banner {
+  padding-block: 100px;
+}
+  
+.banner-text h1,
+.banner-text p,
+.feature-text{
+  text-align: center;
+  color: var(--clr-very-dark-blue);
+}
+
+.banner img {
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.banner-text p {
+  margin-block: 20px;
+}
+
+form {
+  padding: 15px;
+  
+}
+
+input[type="text"] {
+  border: 1px solid var(--clr-desaturated-blue);
+}
+
+form input {
+  height: 35px;
+  width: 100%;
+  margin-block: 10px;
+  border-radius: 5px;
+}
+
+#femail {
+  padding-left : 15px;
+  font-size: 0.8rem;
+}
+
+input[type="submit"] {
+  color: var(--clr-light-grayish-blue);
+  background-color: var(--clr-bright-blue);
+  border: none;
+  cursor: pointer;
+}
+
+.feature {
+  padding-inline: 15px;
+  margin-bottom: 80px;
+}
+.feature img {
+  padding-inline: 25px;
+}
+
+.feature-text {
+  margin-block: 50px;
+}
+
+.feature-text h4 {
+  margin-block: 15px;
+}
+.feature-text p {
+  margin-block: 10px;
+  text-align: left;
+}
+.link-container {
+  display: flex;
+  justify-content: center;
+}
+.link {
+  padding-block: 2px;
+  border-bottom: 2px solid var(--clr-moderate-cyan);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+}
+.link a {
+  text-decoration: none;
+  color: var(--clr-moderate-cyan);
+}
+.link img {
+  display: inline;
+  padding:0;
+  height: 18px;width: 18px;
+}
+
+.card {
+  text-align: center;
+  margin: 25px;
+  padding: 20px;
+  padding-right: 10px;
+  box-shadow: 0 0 10px 5px hsla(0, 1.1%, 63.1%, 0.09);
+}
+.card >p {
+  text-align: left;
+  font-size: .7rem;
+  line-height: 1.5rem;
+  padding-top:30px;
+  position: relative;
+}
+.card > p::before {
+  content:url('../images/icon-quotes.svg');
+/*   width: 22px;
+  height: 22px; */
+  transform: scale(1.5);
+  position: absolute;
+  top:-1px;
+  left:3px;
+}
+.testimony-author {
+  margin-top:10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card img {
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 15px;
+}
+.author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card h4{
+  font-size: .8rem;
+}
+.author-designation{
+  font-size: .7rem;
+  line-height: 1.5rem;
+}
+
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
